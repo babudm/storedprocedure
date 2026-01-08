@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPO_URL = 'https://github.com/enreap/database-version-control-project.git'
+        GIT_REPO_URL = 'https://github.com/babudm/database-version-control-project.git'
         BRANCH_NAME  = 'main'
 
         // Jenkins tool configurations
@@ -14,10 +14,10 @@ pipeline {
         JDBC_DRIVER = '/opt/liquibase/lib/mysql-connector-j-9.4.0.jar'
 
         // ✅ Use PRIVATE IP + recommended JDBC params
-        DB_URL = 'jdbc:mysql://172.31.29.235:3306/jenkins_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC'
+        DB_URL = 'jdbc:mysql://xx.xx.xx.xx:3306/jenkins_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC'
 
-        DB_USER = 'myuser'
-        DB_PASSWORD = 'MyP@ssw0rd123'
+        DB_USER = 'xxxx'
+        DB_PASSWORD = 'xxxxxx'
 
         // Liquibase changelogs
         CHANGELOG_FILE = 'changelog/db.changelog.xml'
